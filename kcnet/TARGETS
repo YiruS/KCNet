@@ -1,0 +1,37 @@
+python_library(
+    name = "kc_functions",
+    srcs = [
+        "kc_functions.py",
+    ],
+    base_module = "",
+    py_version = "3",
+    deps = [
+        "//caffe2:torch",
+        "//pytorch/vision:torchvision",
+    ],
+    external_deps = [
+        ("numpy", None),
+    ],
+)
+
+
+python_library(
+    name = "kc_module",
+    srcs = [
+        "kc_module.py",
+    ],
+    base_module = "",
+    py_version = "3",
+    deps = [
+        ":kc_functions",
+        "//caffe2:torch",
+        "//pytorch/vision:torchvision",
+    ],
+    external_deps = [
+        ("numpy", None),
+    ],
+)
+
+
+
+

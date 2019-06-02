@@ -1,0 +1,63 @@
+python_library(
+    name = "dataset",
+    srcs = [
+        "dataset.py",
+    ],
+    base_module = "",
+    py_version = "3",
+    deps = [
+        "//caffe2:torch",
+    ],
+    external_deps = [
+        ("numpy", None),
+    ],
+)
+
+python_library(
+    name = "eval",
+    srcs = [
+        "eval.py",
+    ],
+    base_module = "",
+    py_version = "3",
+    deps = [
+        "//caffe2:torch",
+    ],
+    external_deps = [
+        ("numpy", None),
+    ],
+)
+
+python_library(
+    name = "logger",
+    srcs = [
+        "logger.py",
+    ],
+    base_module = "",
+    py_version = "3",
+    deps = [
+        "//caffe2:torch",
+    ],
+    external_deps = [
+        ("numpy", None),
+        ("matplotlib", None),
+    ],
+)
+
+python_library(
+    name = "misc",
+    srcs = [
+        "misc.py",
+    ],
+    base_module = "",
+    py_version = "3",
+    deps = [
+        "//caffe2:torch",
+    ],
+    external_deps = [
+        ("numpy", None),
+    ],
+)
+
+
+

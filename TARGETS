@@ -1,0 +1,23 @@
+python_binary(
+    name = "main_yirus",
+    srcs = [
+        "__main__yirus.py",
+    ],
+    base_module = "",
+    main_module = "__main__yirus",
+    py_version = "3",
+    deps = [
+        "//experimental/deeplearning/frl-eye-tracking/pythonscripts/pytorch_models/3D_Modeling/KCNet/utils:dataset",
+        "//experimental/deeplearning/frl-eye-tracking/pythonscripts/pytorch_models/3D_Modeling/KCNet/utils:eval",
+        "//experimental/deeplearning/frl-eye-tracking/pythonscripts/pytorch_models/3D_Modeling/KCNet/utils:logger",
+        "//experimental/deeplearning/frl-eye-tracking/pythonscripts/pytorch_models/3D_Modeling/KCNet/utils:misc",
+        "//caffe2:torch",
+        "//experimental/deeplearning/frl-eye-tracking/pythonscripts/pytorch_models/3D_Modeling/KCNet/kcnet:kc_functions",
+        "//experimental/deeplearning/frl-eye-tracking/pythonscripts/pytorch_models/3D_Modeling/KCNet/kcnet:kc_module",
+
+        ],
+    external_deps = [
+        ("numpy", None),
+    ],
+)
+
